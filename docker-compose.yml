@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./praktikum-8.html:/usr/share/nginx/html/praktikum-8.html
+      - ./praktikum-8.js:/usr/share/nginx/html/praktikum-8.js
+    restart: unless-stopped
